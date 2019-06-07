@@ -1,0 +1,5 @@
+#Redirection vers index.php
+RewriteEngine on
+# Do not rewrite for public files .NC means NoCase
+RewriteCond %{REQUEST_URI} !^/public/.*$ [NC] 
+RewriteRule ^(.*)$ index.php?url=$1 

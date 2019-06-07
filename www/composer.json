@@ -1,0 +1,15 @@
+{
+  "name": "anis-campos/my_mvc",
+  "description": "Mon implementation de MVC",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "author's name",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "latte/latte": "v2.5.1"
+  }
+}
