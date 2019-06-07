@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  # Database
+  db:
+    image: postgres:11-alpine
+    restart: always
+    environment: 
+      POSTGRES_PASSWORD: this_is_a_strong_p@ssw0rd
+  
+  # web server
+  www:
+    build:
+      context: php_postgres/
+      args:
+        - WITH_XDEBUG=true
+    image: php_apache_postgres
+    restart: always
+    env_file: ../.env
+    links:
+      - db:database
+    volumes:
+      - ../www:/var/www/html
+    ports:
+      - 8888:80
+    
