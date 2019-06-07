@@ -16,7 +16,7 @@ services:
         - WITH_XDEBUG=true
     image: php_apache_postgres
     restart: always
-    env_file: ../.env
+    env_file: .env
     links:
       - db:database
     volumes:
