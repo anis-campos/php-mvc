@@ -5,6 +5,12 @@ class HomeController extends Controller
 
     function index()
     {
-        self::json([ "test"=>"Hello World"]);
+        return parent::view();
+    }
+
+
+    function test()
+    {
+        parent::json(["test" => "Hello World"]);
     }
 }
