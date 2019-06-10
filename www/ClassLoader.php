@@ -13,7 +13,7 @@ class ClassLoader
      * ClassLoader constructor.
      * @param string[] $paths
      */
-    public function __construct(array $paths = ["Model/", "View/"])
+    public function __construct(array $paths = ["Model/", "Views/"])
     {
         $this->locations = $paths;
     }
