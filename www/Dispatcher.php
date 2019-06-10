@@ -15,11 +15,16 @@ class Dispatcher
      * @var string
      */
     private $controllerName;
+    /**
+     * @var ViewEngine
+     */
+    private $viewEngine;
 
-    public function __construct($request)
+    public function __construct($request, $viewEngine)
     {
         $this->request = $request;
         $this->loadController($this->request->getController());
+        $this->viewEngine = $viewEngine;
     }
 
     private function loadController($controller)
@@ -47,8 +52,7 @@ class Dispatcher
             return;
         }
 
-        $this->controller->invoke($this->request);
+        $this->controller->invoke($this->request, $this->viewEngine);
     }
 }
 
-?>
