@@ -32,7 +32,7 @@ class Dispatcher
         $name = $controller . "Controller";
         $file = './Controllers/' . $name . '.php';
         if (file_exists($file))
-            require($file);
+            require_once $file;
         $this->controllerName = $name;
     }
 

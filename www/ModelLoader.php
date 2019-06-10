@@ -1,6 +1,6 @@
 <?php
 
-class ClassLoader
+class ModelLoader
 {
 
 
@@ -13,7 +13,7 @@ class ClassLoader
      * ClassLoader constructor.
      * @param string[] $paths
      */
-    public function __construct(array $paths = ["Model/", "Views/"])
+    public function __construct(array $paths = ["Model/"])
     {
         $this->locations = $paths;
     }

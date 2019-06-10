@@ -1,16 +1,16 @@
 <?php
-require "vendor/autoload.php";
 
-require "Dispatcher.php";
-require "Router.php";
-require "Request.php";
-require "Controller.php";
-require "ClassLoader.php";
-require "ViewEngine.php";
-require "LatteEngine.php";
+require_once "vendor/autoload.php";
+require_once "Dispatcher.php";
+require_once "Router.php";
+require_once "Request.php";
+require_once "Controller.php";
+require_once "ModelLoader.php";
+require_once "ViewEngine.php";
+require_once "LatteEngine.php";
 
 
-$register = new ClassLoader();
+$register = new ModelLoader();
 $register->register();
 
 $router = new Router($_SERVER["REQUEST_URI"]);
