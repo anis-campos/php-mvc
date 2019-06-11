@@ -1,4 +1,5 @@
 <?php
+namespace myMVC;
 
 class Request
 {

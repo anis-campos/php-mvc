@@ -1,5 +1,7 @@
 <?php
 
+namespace myMVC;
+
 class Dispatcher
 {
     /**
@@ -29,10 +31,7 @@ class Dispatcher
 
     private function loadController($controller)
     {
-        $name = $controller . "Controller";
-        $file = './Controllers/' . $name . '.php';
-        if (file_exists($file))
-            require_once $file;
+        $name = __NAMESPACE__ . '\\' . $controller . "Controller";
         $this->controllerName = $name;
     }
 

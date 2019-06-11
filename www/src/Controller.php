@@ -1,5 +1,6 @@
 <?php
 
+namespace myMVC;
 
 abstract class Controller
 {
@@ -27,7 +28,7 @@ abstract class Controller
      */
     protected function view($model = null, $fileName = null)
     {
-        $fileName = $fileName ?? "Views/{$this->request->getController()}/{$this->request->getAction()}";
+        $fileName = $fileName ?? __DIR__ . "/Views/{$this->request->getController()}/{$this->request->getAction()}";
         $this->viewEngine->setModel($model);
         $this->viewEngine->setFile($fileName);
 

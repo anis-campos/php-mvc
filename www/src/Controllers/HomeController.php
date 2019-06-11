@@ -1,4 +1,5 @@
 <?php
+namespace myMVC;
 
 class HomeController extends Controller
 {
